@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>UI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<style>
+	/* 탭 */
+	*{padding: 0;margin: 0; box-sizing: border-box;}
+	ul,li{list-style: none;}
+	.ui-tab{position:relative;height: 45px;text-align: center;background: #ffffff;display: flex;justify-content: start;padding: 0px 0px;}
+	.ui-tab:after{clear:both;content:"";display:block;font-size:0;height:0;line-height:0;visibility:hidden}
+	.ui-tab>li{position:relative;width: 100%;}
+	.ui-tab>li+li{margin-left: 0px;}
+	.ui-tab>li>.bt{font-size: 15px;color: #777777;display: block;padding: 10px 0px 11px;position: relative;}
+	.ui-tab>li>.bt>span{}
+	.ui-tab>li:last-child>.bt{ border-right-width:1px; }
+	.ui-tab>li.active>.bt{color: #000000;font-weight: 700;}
+	.ui-tab>li.active>.bt::after{position:absolute;left:0px;bottom: 0px;right: 0px;height:3px;background-color: #000000;border-radius: 3px;display:block;content:"";}
+	
+	.tctn{display:none;}
+	.tctn.active{display:block;}
+	</style>
+</head>
+<body>
+
+	<ul class="ui-tab">
+		<li class="active"><a class="bt" href="javascript:;">탭메뉴1</a></li>
+		<li><a class="bt" href="javascript:;">탭메뉴2</a></li>
+	</ul>
+	
+	<div class="tctn t_1 active">
+		탭내용1 탭내용1 탭내용1 탭내용1 탭내용1 탭내용1
+	</div>
+	<div class="tctn t_2">
+		탭내용2 탭내용2 탭내용2 탭내용2 탭내용2 탭내용2 
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			
+		});
+	</script>
+</body>
+</html>
